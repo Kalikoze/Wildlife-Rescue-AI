@@ -9,8 +9,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#000000",
-        secondary: "#ffffff",
+        primary: {
+          DEFAULT: '#121212', // Rich black
+          light: '#1E1E1E',   // Lighter black
+          dark: '#0A0A0A',    // Darker black
+        },
+        accent: {
+          green: '#28A745',     // Rich modern green
+          orange: {
+            DEFAULT: '#FF5722', // Vibrant orange
+            light: '#FF7F50',   // Coral orange
+            dark: '#D84315',    // Deep orange
+          },
+          gold: '#FFA000',      // Warm gold
+        },
+        neutral: {
+          light: '#F5F5F5',     // Almost white
+          DEFAULT: '#A0A0A0',   // Medium gray
+          dark: '#404040',      // Dark gray
+        }
       },
     },
   },
