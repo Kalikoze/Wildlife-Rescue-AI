@@ -2,34 +2,34 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="relative h-[80vh] bg-primary flex items-center overflow-hidden">
-      {/* Abstract background pattern */}
+    <section data-cy="hero-section" className="relative h-[80vh] bg-primary flex items-center overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 -left-10 w-72 h-72 bg-accent-green rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 -right-10 w-72 h-72 bg-accent-orange rounded-full blur-3xl"></div>
       </div>
 
-      <main className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <article className="max-w-3xl">
           <header>
-            <span className="inline-block mb-4 text-accent-green font-medium tracking-wide uppercase text-sm">
+            <h1 data-cy="hero-brand" className="mb-4 text-accent-green font-medium tracking-wide uppercase text-sm">
               WildWatch AI
-            </span>
+            </h1>
 
-            <h1 className="mb-6 text-5xl font-bold tracking-tight text-neutral-light sm:text-6xl lg:text-7xl">
+            <h2 data-cy="hero-title" className="mb-6 text-5xl font-bold tracking-tight text-neutral-light sm:text-6xl lg:text-7xl">
               Intelligent{' '}
               <span className="text-accent-green">Wildlife</span>{' '}
               Monitoring with{' '}
               <span className="text-accent-orange">AI</span>
-            </h1>
+            </h2>
           </header>
 
-          <p className="mb-12 text-xl text-neutral-light/80 lg:text-2xl font-light leading-relaxed">
+          <p data-cy="hero-description" className="mb-12 text-xl text-neutral-light/80 lg:text-2xl font-light leading-relaxed">
             Empowering zoos, sanctuaries, and educators with AI-powered video analysis to better understand and protect animal behavior.
           </p>
 
-          <nav className="flex flex-wrap gap-6">
+          <nav data-cy="hero-cta" className="flex flex-wrap gap-6">
             <Link
+              data-cy="hero-cta-primary"
               href="/dashboard"
               className="group inline-flex items-center px-8 py-4 text-base font-medium text-neutral-light bg-accent-orange hover:bg-accent-orange-dark rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
             >
@@ -39,6 +39,7 @@ export default function Hero() {
               </svg>
             </Link>
             <Link
+              data-cy="hero-cta-secondary"
               href="/about"
               className="group inline-flex items-center px-8 py-4 text-base font-medium text-accent-green border-2 border-accent-green hover:bg-accent-green hover:text-primary rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
             >
@@ -49,7 +50,7 @@ export default function Hero() {
             </Link>
           </nav>
         </article>
-      </main>
+      </div>
     </section>
   )
 } 
